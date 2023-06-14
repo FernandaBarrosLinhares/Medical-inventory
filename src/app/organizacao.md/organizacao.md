@@ -18,7 +18,30 @@ Feature-3
 (x)criar a guarda de rota
 (x)criar HTML da pagina cadastro paciente
 
+Feature-4
+
+(x) criar type script login
+(x)criar servico de local storage
+(x) criar html pagina cadastro paciente
+(x) criar servico login acessado
+
+Feature-5
 
 
+
+(x)criacao do formulario de cadastro novo usuario
+(x) novo formulario de login
+(x)correção de funções erradas
+(x)refiz o app-routing que sumiu
+(x)refiz a Guarda de rota
+(x) refiz o menu
+
+
+()criar funcao de fechar menu
+()criar funcao de abrir modal
+()criar serviço aceeso login
+()guardar as informacoes no local storage
+()
 ()validar as entradas
 ()permanecer no Local estorage
+()criar o formulario de cadastro (modal) html

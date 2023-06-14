@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './pages/login/login.component';
+
 
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -12,12 +12,15 @@ import { CadastroExameComponent } from './pages/cadastro-exame/cadastro-exame.co
 import { ListagemProntuarioComponent } from './pages/listagem-prontuario/listagem-prontuario.component';
 import { ProntuarioPacienteComponent } from './pages/prontuario-paciente/prontuario-paciente.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { FormularioCadastroComponent } from './pages/login/formulario-cadastro/formulario-cadastro.component';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
+import { FormularioCadastroComponent } from './components/formulario-cadastro/formulario-cadastro.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     MenuComponent,
     ToolbarComponent,
     HomeComponent,
@@ -26,10 +29,22 @@ import { FormularioCadastroComponent } from './pages/login/formulario-cadastro/f
     CadastroExameComponent,
     ListagemProntuarioComponent,
     ProntuarioPacienteComponent,
+    LoginComponent,
     FormularioCadastroComponent
+
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AppRoutingModule
+
+
+
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
