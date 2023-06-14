@@ -1,1 +1,198 @@
-<p>cadastro-paciente works!</p>
+<!-- Deve conter um formulário para cadastro de paciente com botões para editar, deletar e salvar.
+Durante o cadastro de um novo paciente, os botões de editar e deletar devem ficar desativados (desabilitados).
+Campos do formulário:
+Deverá verificar os dados informados antes de cadastrar.
+Deverá criar um identificador único para cada paciente cadastrado.
+Deverá apresentar animação ao salvar. -->
+
+<div class=" row">
+
+
+ 
+    <button type="submit" class="button" class="btn btn-outline-info text-body-info my-4">Editar</button>
+    <button type="submit" class="button" class="btn btn-outline-info text-body-info my-4"> Deletar</button>
+    <button type="submit" class="button" class="btn btn-outline-info text-body-info my-4"> Salvar</button>
+  </div>
+
+   
+
+
+
+
+  <form>
+     <!--  Nome Completo: Obrigatório, com máximo e mínimo de 80 e 4 caracteres, respectivamente. -->
+     
+     <div class="col-md-8">
+      <label for="inputNome completo" class="form-label">Nome</label>
+      <input
+       type="text"
+       class="form-control"
+       id="inputNome">
+    </div>
+   
+
+   <!-- Gênero: Obrigatório com dropdown de opções pré-definidas. -->
+
+   <div class="col-md-1">
+
+    <select class="form-select" multiple aria-label="multiple select example">
+      <option selected>Genero</option>
+      <option value="1">Masculino</option>
+      <option value="2">Feminino</option>
+    </select>
+
+  </div>
+
+   
+    <!-- Data de Nascimento: Obrigatório, data válida. -->
+
+    <!-- https://ng-bootstrap.github.io/#/components/datepicker/examples-->
+
+    <!-- <p>Simple datepicker</p>
+
+    <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+   
+    <hr />
+   
+    <button class="btn btn-sm btn-outline-primary me-2" (click)="selectToday()">Select Today</button>
+    <button class="btn btn-sm btn-outline-primary me-2" (click)="dp.navigateTo()">To current month</button>
+    <button class="btn btn-sm btn-outline-primary me-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
+   
+    <hr />
+   
+    <pre>Month: {{ date.month }}.{{ date.year }}</pre>
+    <pre>Model: {{ model | json }}</pre> -->
+
+
+    <!-- CPF: Obrigatório com o formato 000.000.000-00 -->
+    <div class="col-md-2">
+      <label for="inputCpf" class="form-label">CPF</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputCpf">
+    </div>
+
+    <!-- RG com órgão expedidor: Obrigatório, com máximo de 20 caracteres. -->
+
+    <div class="col-md-2">
+      <label for="inputRg" class="form-label">RG</label>
+      <input
+       type="number"
+       class="form-control"
+       id="inputRg">
+    </div>
+
+    <!-- Estado Civil: Obrigatório com dropdown de opções pré-definidas. -->
+
+    <div class="col-md-1">
+      <select class="form-select" multiple aria-label="multiple select example">
+        <option selected>Estado civil</option>
+        <option value="1">Solteiro</option>
+        <option value="2">Casado</option>
+        <option value="3">União estavel</option>
+        <option value="1">Divorciado</option>
+        <option value="2">Viúvo</option>
+      </select>
+    </div>
+
+    <!-- Telefone: Obrigatório com o formato (99) 9 9999-9999. -->
+
+    <div class="col-md-2">
+      <label for="inputTelefone" class="form-label">Telefone</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputTelefone">
+    </div>
+
+    <!-- E-mail: Não obrigatório e com validação. -->
+    <form class="row g-3">
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <!-- Naturalidade: Obrigatório, com máximo e mínimo de 64 e 8n caracteres, respectivamente. -->
+      <div class="col-md-3">
+        <label for="inputNaturalidade" class="form-label">Naturalidade</label>
+        <input type="text" class="form-control" id="inputNaturalidade">
+      </div>
+
+      <!-- Contato de Emergência: Obrigatório com o formato (99) 9 9999-9999. -->
+
+      <div class="col-md-2">
+        <label for="inputContatoEmergencia" class="form-label">Contato Emergência</label>
+        <input type="text" class="form-control" id="inputContatoEmergência">
+      </div>
+
+     
+  <!-- Lista de Alergias: Não obrigatório.
+  Lista de Cuidados Específicos: Não obrigatório.
+  Convênio: Não obrigatório.
+  Número do Convênio: Não obrigatório.
+  Validade do Convênio: Não obrigatório. -->
+
+
+
+
+
+  <!-- Deverá utilizar a API do ViaCEP para buscar os dados de endereço. -->
+
+  <!-- Esperando assistir a aula -->
+
+  <p> Endereço</p>
+
+  <!-- Rua -->
+
+  <div class="col-md-6">
+    <label for="inputRua" class="form-label">Rua</label>
+    <input type="text" class="form-control" id="inputRua">
+  </div>
+
+  <!-- Logradouro -->
+
+  <div class="col-4 3-md-2">
+    <label for="inputLogradouro" class="form-label">Logradouro </label>
+    <input type="text" class="form-control" id="inputLogradouro">
+  </div>
+
+  <!-- Número -->
+  <div class="col-md-1">
+    <label for="inputContatoNumero" class="form-label">Número</label>
+    <input type="number" class="form-control" id="inputContatoNumero">
+  </div>
+
+  <!-- Complemento -->
+
+  <div class="col-md-3">
+    <label for="inputComplemento" class="form-label">Complemento</label>
+    <input type="text" class="form-control" id="inputComplemento">
+  </div>
+
+  <!-- Bairro -->
+
+  <div class="col-md-3">
+    <label for="inputBairro" class="form-label">Bairro</label>
+    <input type="text" class="form-control" id="inputBairro">
+  </div>
+  <!-- Cidade -->
+  <div class="col-4 3-md-3">
+    <label for="inputCidade" class="form-label">Cidade </label>
+    <input type="text" class="form-control" id="inputCidade">
+  </div>
+
+  <!-- Estado -->
+
+  <div class="col-4 3-md-1">
+    <label for="inputEstado" class="form-label">Estado</label>
+    <input type="text" class="form-control" id="inputEstado">
+  </div>
+
+  <!-- Ponto de Referência -->
+
+  <div class="col-4 3-md-6">
+    <label for="inputPontoReferencia" class="form-label">Ponto de Referência </label>
+    <input type="text" class="form-control" id="inputPontoREferencia">
+  </div>
+
+  </form>
