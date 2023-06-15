@@ -36,6 +36,16 @@ Feature-5
 (x)refiz a Guarda de rota
 (x) refiz o menu
 
+Feature-6
+
+(x)criação modal componente
+(x)instalação  e desisntalação do  Material(deu erro)
+(x)criar componente card
+(x)criar estrutura pagina inicial layout/card e search
+()criar validacao de formulario de cadastro(com erros, rever)
+
+()criar função abrir o modal
+
 
 ()criar funcao de fechar menu
 ()criar funcao de abrir modal

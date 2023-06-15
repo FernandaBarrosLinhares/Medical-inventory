@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { LocalStorageService } from 'src/app/local-storage.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -10,19 +13,28 @@ import { LocalStorageService } from 'src/app/local-storage.service';
 })
 export class LoginComponent implements OnInit{
   loginForm! :FormGroup;
+  @Output() Modal: EventEmitter<any> = new EventEmitter()
+  private _modal: any;
+  public get modal(): any {
+    return this._modal;
+  }
+  public set modal(value: any) {
+    this._modal = value;
+  }
 
 
-  //constructor(private router: Router) { }
+  //Incluindo 0s services criados
   constructor(){
      privateStorage: LocalStorageService
+     privaterouter: Router
 
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit() {
+    const loginForm = new FormGroup({
+      email: new FormControl,
+      password: new FormControl
+    })
   }
-
-
-
 
    // Lógica de autenticação aqui
     // Você pode verificar se o email/senha é válido
@@ -48,6 +60,12 @@ export class LoginComponent implements OnInit{
     window.alert ("Página em construção!")
 
 }
+showModal(){
+  this.modal = this.modal
+}
+
+
+}
 
 
  // InSign() {
@@ -57,7 +75,7 @@ export class LoginComponent implements OnInit{
 
 
    // this.router.navigate(['/home']); // Redirecionar para a página principal após o login bem-sucedido
-  }
+
 
 
 function esqueceuSuaSenha() {
@@ -67,9 +85,10 @@ function esqueceuSuaSenha() {
 function entrar() {
   throw new Error('Function not implemented.');
 }
-    // Para abrir uma página/modal de criação de conta
-  //openSignupModal() {
 
-//}
+function ngOnInit() {
+  throw new Error('Function not implemented.');
+}
+    // Para abrir uma página/modal de criação de conta
 
 
