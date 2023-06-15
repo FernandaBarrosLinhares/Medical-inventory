@@ -16,6 +16,10 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { FormularioCadastroComponent } from './components/formulario-cadastro/formulario-cadastro.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ModalComponent } from './components/modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardComponent } from './components/card/card.component';
+
 
 
 @NgModule({
@@ -30,7 +34,10 @@ import { AppRoutingModule } from './app-routing.module';
     ListagemProntuarioComponent,
     ProntuarioPacienteComponent,
     LoginComponent,
-    FormularioCadastroComponent
+    FormularioCadastroComponent,
+    ModalComponent,
+    CardComponent,
+
 
 
   ],
@@ -38,7 +45,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+
 
 
 

@@ -6,8 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
+showMenu: boolean | undefined;
 
-
+show(): void{
+  this.showMenu = !this.showMenu; //toggle
+}
 
 }
 

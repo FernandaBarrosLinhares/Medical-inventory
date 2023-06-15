@@ -1,0 +1,18 @@
+<div class="card" style="width: 18rem">
+  <img
+    src=""
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <!-- ng-content sem seletor nenhum -->
+    <h5 class="card-title"><ng-content></ng-content></h5>
+    <p class="card-text">
+      <!-- ng-content com o seletor para a tag p, ou seja, toda tag p passada para
+      dentro da tag do componente (app-card) irá parar aqui -->
+      <ng-content select="p"></ng-content>
+    </p>
+    <!-- ng-content com o seletor para qualquer container com a classe button -->
+    <ng-content select=".button"></ng-content>
+  </div>
+</div>

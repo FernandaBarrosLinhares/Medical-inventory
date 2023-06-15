@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-cadastro',
@@ -14,7 +14,30 @@ formRegister!: FormGroup;
 constructor(){}
 
   ngOnInit(){
-    this.criarForm();
+    //this.criarForm();
+
+    //Validação de formulário do ReactiveForm
+    this.formRegister = new FormGroup({
+      id: new FormControl (''),
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl ('',[Validators.required]),
+      confirmPassword: new FormControl('',Validators.required),
+    })
+  }
+
+  get email(){
+    return this.formRegister.get('email')
+  }
+  get password(){
+    return this.formRegister.get('password')
+  }
+  get confirmPassword(){
+    return this.formRegister.get('confirmPassword')
+  }
+//para não ficar travado nas validações
+  submit(){
+    if(this.formRegister.invalid)
+    return;
   }
 
   //Função de inicializacao do form Reactive Form
