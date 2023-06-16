@@ -9,15 +9,10 @@ Deverá apresentar animação ao salvar. -->
 
 
  
-    <button type="submit" class="button" class="btn btn-outline-info text-body-info my-4">Editar</button>
-    <button type="submit" class="button" class="btn btn-outline-info text-body-info my-4"> Deletar</button>
-    <button type="submit" class="button" class="btn btn-outline-info text-body-info my-4"> Salvar</button>
+    <button type="submit" class="button" class="col-3 btn btn-outline-info text-body-info my-4">Editar</button>
+    <button type="submit" class="button" class=" col-3 btn btn-outline-info text-body-info my-4"> Deletar</button>
+    <button type="submit" class="button" class="col-3 btn btn-outline-info text-body-info my-4"> Salvar</button>
   </div>
-
-   
-
-
-
 
   <form >
      <!--  Nome Completo: Obrigatório, com máximo e mínimo de 80 e 4 caracteres, respectivamente. -->
@@ -34,7 +29,7 @@ Deverá apresentar animação ao salvar. -->
 
    <!-- Gênero: Obrigatório com dropdown de opções pré-definidas. -->
 
-   <div class="col-md-1">
+   <div class="col-3 md-1">
 
     <select class="form-select" multiple aria-label="multiple select example">
       <option selected>Genero</option>
@@ -79,14 +74,22 @@ Deverá apresentar animação ao salvar. -->
     <div class="col-md-2">
       <label for="inputRg" class="form-label">RG</label>
       <input
-       type="number"
+       type="text"
        class="form-control"
        id="inputRg">
     </div>
+  <div class="col-3 md-8">
+        <label for="nomeCompleto" >Orgão expedidor</label>
+        <input
+         type="text"
+         id="orgaoExpedidor"
+         class="form-control"
+         formControlName="orgaoExpedidor">
+      </div>
 
     <!-- Estado Civil: Obrigatório com dropdown de opções pré-definidas. -->
 
-    <div class="col-md-1">
+    <div class="col-3 -md-1">
       <select class="form-select" multiple aria-label="multiple select example">
         <option selected>Estado civil</option>
         <option value="1">Solteiro</option>

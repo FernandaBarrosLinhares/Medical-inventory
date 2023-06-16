@@ -53,6 +53,12 @@ Feature-7
 (x)criei a classe pacientes
 (x) comecei a organizar a home
 
+Features-8
+(x)criação html cadastro consulta
+(x)criação html cadastro exame
+(x)criacao da classe consulta
+(x)criação da classe exame
+(x) função limpar formulario login
 
 
 

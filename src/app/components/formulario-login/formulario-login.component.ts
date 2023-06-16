@@ -31,4 +31,6 @@ export class FormularioLoginComponent implements OnInit {
     console.log(this.formUser.value);
   }
 
+
+
 }

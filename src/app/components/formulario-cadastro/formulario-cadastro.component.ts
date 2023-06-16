@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NewUser } from 'src/app/users/shared/new-user';
+import { User } from 'src/app/users/shared/user';
 
 @Component({
   selector: 'app-formulario-cadastro',
@@ -42,22 +43,32 @@ constructor(){}
   get confirmPassword(){
     return this.formNewUser.get('confirmPassword')
   }
-//para não ficar travado nas validações
-onSubmit(){
+
+
+onSubmit() {
+  // aqui você pode implementar a logica para fazer seu formulário salvar
   console.log(this.formNewUser.value);
+
+  // chamando a função createForm para limpar os campos na tela
+  this.createForm(new NewUser());
 }
 
   //Função de inicializacao do form Reactive Form
 
 
 // Declação do FormGroup para utilização no Reactive Forms
-register(){
-  console.log('Reactive |Forms');
-  if(this.formNewUser.value.senha ! == this.formNewUser.value.confirmarSenha == this.formNewUser.value.confirmarSenha){
-    window.alert('Dados incorretos');
-  }else{
-    window.alert('ok')
-  }
-}
+//register(){
+  //console.log('Reactive |Forms');
+  //if(this.formNewUser.value.senha ! == this.formNewUser.value.confirmarSenha == this.formNewUser.value.confirmarSenha){
+    //window.alert('Dados incorretos');
+  //}else{
+    //window.alert('ok')
+  //}
+//}
+
+//Salvando as informaçoes
+
 
 }
+
+
