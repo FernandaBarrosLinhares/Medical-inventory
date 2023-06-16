@@ -1,12 +1,12 @@
 <div class="row">
-  <app-toolbar>#toolbar *ngIf= "showToolbar" mode="side" [(opened)]</app-toolbar>
+  <app-toolbar></app-toolbar>
 </div>
 
 <div>
   <div class="container flex ">
     <div class="row">
       <div class="col-4 mb-4 p-3 rounded-4 align-items-left"  >
-        <app-menu class ="menu" (click)="opened =!opened"> #menu *ngIf= "showMenu" [(opened)]</app-menu>
+        <app-menu ></app-menu>
       </div>
       <div class="col-8 flex">
         <router-outlet></router-outlet>
