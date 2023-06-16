@@ -44,14 +44,23 @@ Feature-6
 (x)criar estrutura pagina inicial layout/card e search
 ()criar validacao de formulario de cadastro(com erros, rever)
 
-()criar função abrir o modal
+Feature-7
+
+(x)refiz formulário login 
+(x)refiz formulario de cadastro de usuario
+(x)crie a classe usuario
+(x)criei a classe novo usuario
+(x)criei a classe pacientes
+(x) comecei a organizar a home
+
+
+
 
 
 ()criar funcao de fechar menu
 ()criar funcao de abrir modal
 ()criar serviço aceeso login
 ()guardar as informacoes no local storage
-()
 ()validar as entradas
 ()permanecer no Local estorage
 ()criar o formulario de cadastro (modal) html
