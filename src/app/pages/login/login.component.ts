@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit{
 
 
   //Incluindo 0s services criados
-  constructor(){
-     privateStorage: LocalStorageService
-     privaterouter: Router
+  constructor( privateStorage: LocalStorageService,
+    router: Router){
+
   }
   ngOnInit() {
     const loginForm = new FormGroup({
@@ -30,14 +30,15 @@ export class LoginComponent implements OnInit{
     // Você pode verificar se o email/senha é válido
 
     //Função para inicialização do form ReactiveForms
-  entrar(){
-    console.log('ReactiveForms');
-  const newLocal = this;
-    if(newLocal.loginForm.value.email !== this.loginForm.value.password){
-      window.alert('erro')
-    }else{
-      window.alert('ok')
-    }
+    entrar(){
+      console.log('ReactiveForms');
+    const newLocal = this;
+      if(newLocal.loginForm.value.email !== this.loginForm.value.password){
+        window.alert('erro')
+      }else{
+        window.alert('ok')
+      }
+
   }
   esqueceuSuaSenha() {
     window.alert ("Página em construção!")

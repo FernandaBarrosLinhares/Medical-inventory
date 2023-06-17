@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AceesLoginService } from 'src/app/acees-login.service';
 import { LocalStorageService } from 'src/app/local-storage.service';
 import { User } from 'src/app/users/shared/user';
 
@@ -22,7 +23,8 @@ export class FormularioLoginComponent implements OnInit {
 
   constructor(
     privateStorage: LocalStorageService,
-    private router: Router
+    private router: Router,
+    private acessLoginService: AceesLoginService
 
     ){
 
@@ -55,7 +57,7 @@ export class FormularioLoginComponent implements OnInit {
 
       }, 1000);
     } else {
-      alert('Dados incorretos.');
+     alert("Usuario não encontrado")
     }
   }
   esqueceuASenha() {
