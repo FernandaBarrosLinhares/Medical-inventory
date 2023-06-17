@@ -1,44 +1,128 @@
 //Página de Cadastro de Consulta: Deve conter uma busca de paciente e um formulário para cadastro de consulta com botões editar, deletar e salvar.
+<div class="row">
+  <div class="col-8">
+    <div class=" row ">
+        <button type="submit" class="button" class="col-1 btn btn-info text-body-info my-4">Editar</button>
+        <button type="submit" class="button" class=" col-1 btn btn-danger text-body-info my-4"> Deletar</button>
+        <button type="submit" class="button" class="col-1 btn btn-success text-body-info my-4"> Salvar</button>
+      </div>
+    <form [formGroup]="formConsult">
+
+      //Durante o cadastro, os botões de editar e deletar devem ficar desativados (desabilitados).
+      //Campos do formulário:
+
+      //Motivo da consulta: Obrigatório, com máximo e mínimo de 64 e 8 caracteres, respectivamente.
+      <div class="mb-3">
+        <label for="motivoConsulta" >Motivo consulta</label>
+        <input
+        type="text"
+        class="form-control"
+        id="motivoConsulta"
+        required>
+        <div
+           *ngIf="formConsult.get('motivoConsulta')?.invalid && (formConsult.get('motivoConsulta')?.dirty || formConsult.get('motivoConsulta')?.touched)">
+          <div class="text-red-500 text-sm">*Campo obrigatório</div>
+            <div class="text-red-500 text-sm" *ngIf="formConsult.get('motivoConsulta')?.errors?.['minlength']">*Mínimo de 8
+               caracteres
+              <div>
+                class="text-red-500 text-sm" *ngIf="formulario.get('motivoConsulta')?.errors?.['maxlength']">*Máximo de 64
+                    caracteres
+        </div>
+
+      </div>
+
+      //Data da Consulta: Obrigatório, buscando data atual do sistema e liberando para edição.
+      <div class="col-3 md-1">
+        <label for="data">Data</label>
+            <input
+             type="date"
+             id="data"
+             formControlName="data"
+             required
+             />
+            <div
+                *ngIf="formConsult.get('data')?.invalid && (formConsult.get('data')?.dirty || formConsult.get('data')?.touched)">
+           <div class="text-red-500 text-sm">*Campo obrigatório</div>
+         </div>
+
+      //Horário da Consulta: Obrigatório, buscando horário atual do sistema e liberando para edição.
+      label for="horario">Horário
+        <label for="hora">Horário</label>
+            <input
+            type="time"
+            class="form-control"
+            id="hora"
+            formControlName="hora"
+            required>
+            <div class="text-danger">
+                *ngIf="formConsult.get('hora')?.invalid && (formConsult.get('hora')?.dirty || formConsult.get('hora')?.touched)">
+              *Campo obrigatório.
+            </div>
+
+      //Descrição do Problema: Obrigatório, com máximo e mínimo de 1024 e 16 caracteres, respectivamente.
+
+        <label for="descricaoProblema" >Descrição problema:</label>
+        <input
+        type="text"
+        class="form-control"
+        id="descricaoProblema"
+        formControlName="descricaoProblema"
+        required>
+        <div class="text-danger"
+        *ngIf="formConsult.get('descricaoProblema')?.invalid && (formConsult.get('descricaoProblema')?.dirty || formConsult.get('descricaoProblema')?.touched)">
+        <div class="text-red-500 text-sm">*Campo obrigatório</div>
+        <div class="text-red-500 text-sm" *ngIf="formConsult.get('descricaoProblema')?.errors?.['minlength']">*Mínimo de 16
+            caracteres
+           <div>
+             class="text-red-500 text-sm" *ngIf="formulario.get('descricaoProblema')?.errors?.['maxlength']">*Máximo de 1024
+                 caracteres
+           </div>
+
+   </div>
+      </div>
+
+      //Medicação Receitada: Não obrigatório.
+      <div class="mb-3">
+        <label for="medicacao" >Medicação Receitada:</label>
+        <input
+        type="text"
+        class="form-control"
+        id="medicacao"
+        formControlName="medicacao"
+        required>
+
+      //Dosagem e Precauções: Obrigatório, com máximo e mínimo de 256 e 16 caracteres, respectivamente.
+
+      <div class="mb-3">
+        <label for="dosagem" >Medicação Receitada:</label>
+        <input
+        type="text"
+        class="form-control"
+        id="dosagem"
+        formControlName="dosagem"
+        required>
+        <div
+        *ngIf="formConsult.get('dosagem')?.invalid && (formConsult.get('dosagem')?.dirty || formConsult.get('dosagem')?.touched)">
+        <div class="text-red-500 text-sm">*Campo obrigatório</div>
+        <div class="text-red-500 text-sm" *ngIf="formConsult.get('dosagem')?.errors?.['minlength']">*Mínimo de 16
+            caracteres
+           <div>
+             class="text-red-500 text-sm" *ngIf="formulario.get('dosagem')?.errors?.['maxlength']">*Máximo de 256
+                 caracteres
+           </div>
 
 
-<div class=" row ">
-    <button type="submit" class="button" class="col-1 btn btn-info text-body-info my-4">Editar</button>
-    <button type="submit" class="button" class=" col-1 btn btn-danger text-body-info my-4"> Deletar</button>
-    <button type="submit" class="button" class="col-1 btn btn-success text-body-info my-4"> Salvar</button>
+      //Deverá verificar os dados informados antes de cadastrar.
+      //Deverá criar um identificador único para cada consulta cadastrada.
+      //Deverá apresentar animação ao salvar.
+
+
+
+
+
+
   </div>
-//Durante o cadastro, os botões de editar e deletar devem ficar desativados (desabilitados).
-//Campos do formulário:
 
-//Motivo da consulta: Obrigatório, com máximo e mínimo de 64 e 8 caracteres, respectivamente.
-<div class="mb-3">
-  <label for="motivoConsulta" >Motivo consulta</label>
-  <input type="text" class="form-control" id="motivoConsulta">
 </div>
 
-//Data da Consulta: Obrigatório, buscando data atual do sistema e liberando para edição.
-
-//Horário da Consulta: Obrigatório, buscando horário atual do sistema e liberando para edição.
-
-
-//Descrição do Problema: Obrigatório, com máximo e mínimo de 1024 e 16 caracteres, respectivamente.
-<div class="input-group input-group-lg">
-  <span class="descricao" id="inputGroup-sizing-lg">Descrição</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-//Medicação Receitada: Não obrigatório.
-<div class="mb-3">
-  <label for="medicacao" >Medicação Receitada:</label>
-  <input type="text" class="form-control" id="medicacao">
-</div>
-
-//Dosagem e Precauções: Obrigatório, com máximo e mínimo de 256 e 16 caracteres, respectivamente.
-
-<div class="input-group input-group-lg">
-  <span class="dosagem" id="inputGroup-sizing-lg">Dosagem e Precauções:</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-
-//Deverá verificar os dados informados antes de cadastrar.
-//Deverá criar um identificador único para cada consulta cadastrada.
-//Deverá apresentar animação ao salvar.
 
