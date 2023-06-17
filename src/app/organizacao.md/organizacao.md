@@ -42,7 +42,7 @@ Feature-6
 (x)instalação  e desisntalação do  Material(deu erro)
 (x)criar componente card
 (x)criar estrutura pagina inicial layout/card e search
-()criar validacao de formulario de cadastro(com erros, rever)
+(x)criar validacao de formulario de cadastro(com erros, rever)
 
 Feature-7
 
@@ -60,13 +60,28 @@ Features-8
 (x)criação da classe exame
 (x) função limpar formulario login
 
+Feature-9
+
+(x) validacao do formulario de cadastro
+(x)criar modal de cadastro
+(x)salvar informacoes de usuario e e novo ususrio no local storage
+
+Feature-10
+
+(x)validação de cadastro paciente
+(x) direcionar ususario do login para home
+(inicio da estruturação do html)
+()uso de *ngIf para exibição de componente sem sucesso
+
+
+
 
 
 
 ()criar funcao de fechar menu
-()criar funcao de abrir modal
+
 ()criar serviço aceeso login
-()guardar as informacoes no local storage
+
 ()validar as entradas
 ()permanecer no Local estorage
 ()criar o formulario de cadastro (modal) html

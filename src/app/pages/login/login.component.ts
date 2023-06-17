@@ -13,6 +13,7 @@ import { LocalStorageService } from 'src/app/local-storage.service';
 export class LoginComponent implements OnInit{
   loginForm! :FormGroup;
 
+
   //Incluindo 0s services criados
   constructor(){
      privateStorage: LocalStorageService
@@ -29,10 +30,6 @@ export class LoginComponent implements OnInit{
     // Você pode verificar se o email/senha é válido
 
     //Função para inicialização do form ReactiveForms
-
-
-
-
   entrar(){
     console.log('ReactiveForms');
   const newLocal = this;
@@ -47,7 +44,9 @@ export class LoginComponent implements OnInit{
 
 }
 
+openModal(){
 
+}
 
    // this.router.navigate(['/home']); // Redirecionar para a página principal após o login bem-sucedido
 }

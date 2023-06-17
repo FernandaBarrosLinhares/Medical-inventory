@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LocalStorageService } from 'src/app/local-storage.service';
 import { User } from 'src/app/users/shared/user';
 
@@ -10,9 +11,21 @@ import { User } from 'src/app/users/shared/user';
 })
 export class FormularioLoginComponent implements OnInit {
   formUser!: FormGroup;
+  login = {
+    email: '',
+    senha: '',
+  };
+  users: any = [];
 
-  constructor(){
-    privateStorage: LocalStorageService
+  title = 'login';
+
+
+  constructor(
+    privateStorage: LocalStorageService,
+    private router: Router
+
+    ){
+
   }
 
   ngOnInit() {
@@ -29,6 +42,24 @@ export class FormularioLoginComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.formUser.value);
+  }
+  signIn() {
+    const isUserExist = this.users.some(
+      (e: any) => e.email == this.login.email && e.password == this.login.senha
+    );
+
+    if (isUserExist) {
+      this.users.setLoggedIn(this.login);
+      setTimeout(() => {
+        this.router.navigate(['home']);
+
+      }, 1000);
+    } else {
+      alert('Dados incorretos.');
+    }
+  }
+  esqueceuASenha() {
+    window.alert('Funcionalidade em construção..')
   }
 
 
