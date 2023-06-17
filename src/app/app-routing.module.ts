@@ -17,7 +17,7 @@ import { rotasGuard } from "./rotas.guard";
 const routes: Routes = [
 
   //Criacão de rotas das aplicacao e guarda de rotas
-    {path:'', pathMatch: 'full', redirectTo: 'login'},
+    {path:'', pathMatch: 'full', redirectTo: 'home'},
 
 
 
