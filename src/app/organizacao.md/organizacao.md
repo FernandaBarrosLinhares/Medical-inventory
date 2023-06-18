@@ -96,19 +96,18 @@ Estruturar o layout das paginas
 
 
 
-()Home
-(Cadastro Pacientes)
-(Cadastro Exame)
-(Cadastro Consulta)
-()Criar o Readme
-()fazer o video
+(x)ajustes
+(x)Criar o Readme
+
 
 
 
 ()inserir consulta CEP
 () habilitar e desbilitar os botões das paginas Cadastro de cadastro: Pacientes, Exames e consultas
 ()usar os dados inseridos no login
+()Corrigir a rota
 ()criar os moks e os observables para inserir nos cartões
+()
 
 
 
