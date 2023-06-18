@@ -6,18 +6,20 @@ Deverá criar um identificador único para cada paciente cadastrado.
 Deverá apresentar animação ao salvar. -->
 
 
-  <div class=" row ">
-      <button type="submit" class="button" class="col-1 btn btn-info text-body-info my-4">Editar</button>
-      <button type="submit" class="button" class=" col-1 btn btn-danger text-body-info my-4"> Deletar</button>
-      <button type="submit" class="button" class="col-1 btn btn-success text-body-info my-4"> Salvar</button>
-    </div>
+
 
 <div class="row container-fluid d-flex my-4 p-3 rounded-3">
   <div class= "col-12 d-flex my-4 align-items-start">
     <form [formGroup]="formPatient" (ngSubmit)="onSubmit()" >
+
+      <div class=" row ">
+          <button type="submit" class="button" class="col-md-2 btn btn-info text-body-info my-4">Editar</button>
+          <button type="submit" class="button" class=" col-md-2 btn btn-danger text-body-info my-4"> Deletar</button>
+          <button type="submit" class="button" class="col-md-2 btn btn-success text-body-info my-4"> Salvar</button>
+        </div>
          <!--  Nome Completo: Obrigatório, com máximo e mínimo de 80 e 4 caracteres, respectivamente. -->
 
-         <div class="col-10 align-items-start">
+         <div class="col-8 align-items-start">
           <label for="nomeCompleto" >Nome</label>
           <input
            type="text"
@@ -37,52 +39,7 @@ Deverá apresentar animação ao salvar. -->
            </div>
         </div>
   <div class="row container-fluid d-flex mb-4 rounded-3">
-      <!-- Gênero: Obrigatório com dropdown de opções pré-definidas. -->
 
-      <div class="col-2 md-1">
-
-        <select class="form-select" multiple aria-label="multiple select example">
-          <option selected>Genero</option>
-          <option value="1">Masculino</option>
-          <option value="2">Feminino</option>
-      <div>
-        *ngIf="formulario.get('genero')?.invalid && (formulario.get('genero')?.dirty || formulario.get('genero')?.touched)">
-            <div class="text-red-500 text-sm">*Campo obrigatório</div>
-      </div>
-        </select>
-
-      </div>
-        <!-- Data de Nascimento: Obrigatório, data válida. -->
-
-       <div class="col-3 md-1">
-        <label for="dataNascimento">Data de Nascimento</label>
-            <input
-             type="date"
-             id="dataNascimento"
-             formControlName="dataNascimento"
-             required
-             />
-            <div
-                *ngIf="formPatient.get('dataNascimento')?.invalid && (formPatient.get('dataNascimento')?.dirty || formPatient.get('dataNascimento')?.touched)">
-           <div class="text-red-500 text-sm">*Campo obrigatório</div>
-         </div>
-
-       
-           <!-- Estado Civil: Obrigatório com dropdown de opções pré-definidas. -->
-
-           <div class="col-3 -md-1">
-             <select class="form-select" multiple aria-label="multiple select example">
-               <option selected>Estado civil</option>
-               <option value="1">Solteiro</option>
-               <option value="2">Casado</option>
-               <option value="3">União estavel</option>
-               <option value="1">Divorciado</option>
-               <option value="2">Viúvo</option>
-             </select>
-             <div *ngIf="formPatient.get('estadoCivil')?.invalid && (formPatient.get('estadoCivil')?.dirty || formPatient.get('estadoCivil')?.touched)"
-         class="text-red-600">Campo obrigatório.</div>
-              </div>
-      </div>
 
        
 
@@ -280,6 +237,52 @@ Deverá apresentar animação ao salvar. -->
         <label for="inputPontoReferencia" class="form-label">Ponto de Referência </label>
         <input type="text" class="form-control" id="inputPontoREferencia">
       </div>
+        <!-- Gênero: Obrigatório com dropdown de opções pré-definidas. -->
+
+        <div class="col-2 md-1">
+
+          <select class="form-select" multiple aria-label="multiple select example">
+            <option selected>Genero</option>
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+        <div>
+          *ngIf="formulario.get('genero')?.invalid && (formulario.get('genero')?.dirty || formulario.get('genero')?.touched)">
+              <div class="text-red-500 text-sm">*Campo obrigatório</div>
+        </div>
+          </select>
+
+        </div>
+          <!-- Data de Nascimento: Obrigatório, data válida. -->
+
+         <div class="col-3 md-1">
+          <label for="dataNascimento">Data de Nascimento</label>
+              <input
+               type="date"
+               id="dataNascimento"
+               formControlName="dataNascimento"
+               required
+               />
+              <div
+                  *ngIf="formPatient.get('dataNascimento')?.invalid && (formPatient.get('dataNascimento')?.dirty || formPatient.get('dataNascimento')?.touched)">
+             <div class="text-red-500 text-sm">*Campo obrigatório</div>
+           </div>
+
+         
+             <!-- Estado Civil: Obrigatório com dropdown de opções pré-definidas. -->
+
+             <div class="col-3 -md-1">
+               <select class="form-select" multiple aria-label="multiple select example">
+                 <option selected>Estado civil</option>
+                 <option value="1">Solteiro</option>
+                 <option value="2">Casado</option>
+                 <option value="3">União estavel</option>
+                 <option value="1">Divorciado</option>
+                 <option value="2">Viúvo</option>
+               </select>
+               <div *ngIf="formPatient.get('estadoCivil')?.invalid && (formPatient.get('estadoCivil')?.dirty || formPatient.get('estadoCivil')?.touched)"
+           class="text-red-600">Campo obrigatório.</div>
+                </div>
+        </div>
 
       </form>
     </div>
