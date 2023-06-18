@@ -1,62 +1,64 @@
+<div class="container-fluid">
 
-
-<div class="formRegister">
-  <div class="card-register">
-    <!-- REACTVE FORM-->
-    <form   [formGroup]= "formNewUser"(ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for= "email">Email</label>
-        <input
-        type="text"
-        id="email"
-        name="email"
-        formControlName="email"
-        required
-        />
-        <div class="text-danger"
-        *ngIf="formNewUser.get('email')?.invalid && formNewUser.get('email')?.touched || formNewUser.get('email')?.dirty">
-        <div *ngIf="formNewUser.get('email')?.errors?.['required']">*Campo obrigatório.</div>
-        <div *ngIf="formNewUser.get('email')?.errors?.['email']">
-            Digite um e-mail valido!
-        </div>
-    </div>
-
-      <div class="form-group">
-        <label for="password">Senha</label>
-        <input
-        id="password"
-        name=" password"
-        class="form-control"
-        formControlName="senha"
-        required
-        />
-        <div class="text-danger" *ngIf="formNewUser.get('password')?.invalid && formNewUser.get('password')?.touched">
-          <div *ngIf="formNewUser.get('password')?.errors?.['minlength']">*A senha deve ter no mínimo
-              10 caracteres.</div>
-          <div *ngIf="formNewUser.get('password')?.errors?.['required']">*Campo obrigatório.</div>
+  <div class="formRegister">
+    <div class="card-register">
+      <!-- REACTVE FORM-->
+      <form   [formGroup]= "formNewUser"  (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3 text-start text-primary fw-light  p-3 mb-5 bg-body roundend">
+          <label for= "email">Email</label>
+          <input
+          type="text"
+          id="email"
+          name="email"
+          class="form-control"
+          formControlName="email"
+          required
+          />
+          <div class="text-danger"
+          *ngIf="formNewUser.get('email')?.invalid && formNewUser.get('email')?.touched || formNewUser.get('email')?.dirty">
+          <div *ngIf="formNewUser.get('email')?.errors?.['required']">*Campo obrigatório.</div>
+          <div *ngIf="formNewUser.get('email')?.errors?.['email']">
+              Digite um e-mail valido!
+          </div>
       </div>
 
-
-
-      </div>
-      <div class="form-group">
-        <label for ="confirmPassword">Confirmar senha</label>
-        <input
-        id="confirmPassword"
-        name="confirmPassword"
-        formControlName="confirmPassword"
-        required
-        />
-        <div class="text-danger"
-          *ngIf="formNewUser.get('confirmPassword')?.value != formNewUser .get('password')?.value && formNewUser.get('confirmPassword')?.touched">
-            As senhas
+        <div class="form-group mb-3 text-start text-primary fw-light  p-3 mb-5 bg-body roundend">
+          <label for="password">Senha</label>
+          <input
+          id="password"
+          name=" password"
+          class="form-control"
+          formControlName="senha"
+          required
+          />
+          <div class="text-danger" *ngIf="formNewUser.get('password')?.invalid && formNewUser.get('password')?.touched">
+            <div *ngIf="formNewUser.get('password')?.errors?.['minlength']">*A senha deve ter no mínimo
+                10 caracteres.</div>
+            <div *ngIf="formNewUser.get('password')?.errors?.['required']">*Campo obrigatório.</div>
         </div>
 
-      </div>
 
-      <div class="form-btn">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
+
+        </div>
+        <div class="form-group mb-3  text-primary fw-lightp-3 mb-5 bg-body roundemd">
+          <label for ="confirmPassword">Confirmar senha</label>
+          <input
+          id="confirmPassword"
+          name="confirmPassword"
+          class="form-control"
+          formControlName="confirmPassword"
+          required
+          />
+          <div class="text-danger"
+            *ngIf="formNewUser.get('confirmPassword')?.value != formNewUser .get('password')?.value && formNewUser.get('confirmPassword')?.touched">
+              As senhas
+          </div>
+
+        </div>
+
+</div>
+
+
 
 
 

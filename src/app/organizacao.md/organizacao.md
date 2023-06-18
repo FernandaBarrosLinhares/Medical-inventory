@@ -88,11 +88,27 @@ Feature -12
 (x)tentativa de criar a lista de pacientes para os cards, sem sucesso
 
 
+Feature-13
+
+Estruturar o layout das paginas
+(x)Login
+(x) formatar modal
 
 
 
-()criar serviço aceeso login
+()Home
+(Cadastro Pacientes)
+(Cadastro Exame)
+(Cadastro Consulta)
+()Criar o Readme
+()fazer o video
 
 
-()permanecer no Local estorage
-()criar o formulario de cadastro (modal) html
+
+()inserir consulta CEP
+() habilitar e desbilitar os botões das paginas Cadastro de cadastro: Pacientes, Exames e consultas
+()usar os dados inseridos no login
+()criar os moks e os observables para inserir nos cartões
+
+
+
