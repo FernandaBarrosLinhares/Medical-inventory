@@ -6,7 +6,7 @@ Feautere 1
 
 Feature-2
 
-(x)Criar componetes principais devidadmente organizados entre paginas e componentes
+(x)Criar componetes principais devidamente organizados entre paginas e componentes
 (x)Criar estrutura HtMl Toolbar
 (x) Criar estrutura pagina de login
 
@@ -42,7 +42,7 @@ Feature-6
 (x)instalação  e desisntalação do  Material(deu erro)
 (x)criar componente card
 (x)criar estrutura pagina inicial layout/card e search
-(x)criar validacao de formulario de cadastro(com erros, rever)
+(x)criar validacao de formulario de cadastro
 
 Feature-7
 
@@ -73,15 +73,26 @@ Feature-10
 (inicio da estruturação do html)
 ()uso de *ngIf para exibição de componente sem sucesso
 
+Feature-11
+
+(x) criação da pagina de cadastro consulta
+(x) criação do formulario usando ReactiveForm
+(x) validação do formulário de cadastro consulta
+
+
+Feature -12
+
+(x) inseriri o nome do usuario na toolbar
+(x) tentativa de esconder o menu, usadndo toogle , sem sucesso
+(x)inserindo o nome do projeto na aba do navegador
+(x)tentativa de criar a lista de pacientes para os cards, sem sucesso
 
 
 
 
-
-()criar funcao de fechar menu
 
 ()criar serviço aceeso login
 
-()validar as entradas
+
 ()permanecer no Local estorage
 ()criar o formulario de cadastro (modal) html

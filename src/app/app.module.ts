@@ -20,6 +20,9 @@ import { ModalComponent } from './components/modal/modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './components/card/card.component';
 import { FormularioLoginComponent } from './components/formulario-login/formulario-login.component';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { IfRenderComponent } from './components/if-render/if-render.component';
+import { ListRenderComponent } from './components/list-render/list-render.component';
 
 
 
@@ -40,6 +43,9 @@ import { FormularioLoginComponent } from './components/formulario-login/formular
     ModalComponent,
     CardComponent,
     FormularioLoginComponent,
+    DirectivesComponent,
+    IfRenderComponent,
+    ListRenderComponent,
 
 
 

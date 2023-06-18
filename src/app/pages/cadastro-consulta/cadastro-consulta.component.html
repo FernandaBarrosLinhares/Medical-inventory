@@ -1,18 +1,18 @@
-//Página de Cadastro de Consulta: Deve conter uma busca de paciente e um formulário para cadastro de consulta com botões editar, deletar e salvar.
+<!--Página de Cadastro de Consulta: Deve conter uma busca de paciente e um formulário para cadastro de consulta com botões editar, deletar e salvar.//Durante o cadastro, os botões de editar e deletar devem ficar desativados (desabilitados).
+      //Campos do formulário:-->
 <div class="row">
-  <div class="col-8">
-    <div class=" row ">
-        <button type="submit" class="button" class="col-1 btn btn-info text-body-info my-4">Editar</button>
-        <button type="submit" class="button" class=" col-1 btn btn-danger text-body-info my-4"> Deletar</button>
-        <button type="submit" class="button" class="col-1 btn btn-success text-body-info my-4"> Salvar</button>
-      </div>
+
     <form [formGroup]="formConsult">
 
-      //Durante o cadastro, os botões de editar e deletar devem ficar desativados (desabilitados).
-      //Campos do formulário:
+      <div class="col-8">
+        <div class=" row ">
+           <button type="submit" class="button" class="col-1 btn btn-info text-body-info my-4">Editar</button>
+              <button type="submit" class="button" class=" col-1 btn btn-danger text-body-info my-4"> Deletar</button>
+             <button type="submit" class="button" class="col-1 btn btn-success text-body-info my-4"> Salvar</button>
+          </div>
 
-      //Motivo da consulta: Obrigatório, com máximo e mínimo de 64 e 8 caracteres, respectivamente.
-      <div class="mb-3">
+      <!--//Motivo da consulta: Obrigatório, com máximo e mínimo de 64 e 8 caracteres, respectivamente.-->
+      <div class="row">
         <label for="motivoConsulta" >Motivo consulta</label>
         <input
         type="text"
