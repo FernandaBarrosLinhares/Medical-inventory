@@ -1,27 +1,38 @@
-# Projeto
+# Medical Inventory
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+O **Medical Inventory**, é um software para gerenciamento médico. O colaborador, tem acesso as informações pessoais de cada paciente, assim como consultas, exames e estatísticas unificadas. O que facilita a investigação mais avançadas mediante aos históricos do paciente por colaboradores de diferentes especialidades.
 
-## Development server
+----------------------------------------------------------------------
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##Software Amigável
 
-## Code scaffolding
+O software, possui uma interface intuitiva e de fácil utilização para todos colaboradores. E segurança de informação, já que o acesso, só é possível com o colaborador logado, o que facilita a comunicação do hospital. É divido em:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+*Cadastro paciente;
+*Cadastro exame;
+*Cadastro consulta;
+*Listagem de prontuário;
+*Prontuário do paciente;
 
-## Build
+----------------------------------------------------------
+##Pagina Inicial
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+*Possui quantidade de pacientes cadastrados, quantidade de consultas cadastradas e a quantidade de exames.
+*Campo para buscar pacientes pelo nome, telefone ou e-mail.
+*Cards editáveis das informções  detalhadas do cada paciente, em apenas um click.
 
-## Running unit tests
+--------------------------------------------------------
+## Desenvolvimento do projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O projeto se encontra na parte inicial. Foi criada a estrura do projeto e aplicadas algumas funcionalidades iniciais.
 
-## Running end-to-end tests
+O projeto ainda deverá passar por alteração de layout  e inclusão de outras funcionalidade intrísecas do sistema como:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#Inseri o buscador de CEP através de consumo de API
+#Inserir informções dos pacientes e toranlas dinâmicas
+#Desabilitar botões de editar e deletar, durante o uso
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+

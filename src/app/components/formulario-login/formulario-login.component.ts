@@ -46,24 +46,24 @@ export class FormularioLoginComponent implements OnInit {
     console.log(this.formUser.value);
   }
   signIn() {
-    const isUserExist = this.users.some(
-      (e: any) => e.email == this.login.email && e.password == this.login.senha
-    );
-
-    if (isUserExist) {
-      this.users.setLoggedIn(this.login);
-      setTimeout(() => {
-        this.router.navigate(['home']);
-
-      }, 1000);
-    } else {
-     alert("Usuario não encontrado")
+    const {email,senha}= this.login;
+    const user = this.users.find((u:any)=> u.email === email)
+    if(user && senha){
+      this.router.navigate(['home'])
     }
+
   }
   esqueceuASenha() {
     window.alert('Funcionalidade em construção..')
+
+
   }
+
 
 
 
 }
+
+
+
+
