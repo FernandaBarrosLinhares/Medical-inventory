@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   menuVisible: boolean = true;
+  isOpen = true;
 
 
 
@@ -15,7 +16,9 @@ export class MenuComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-
+  toggleMenu() {
+    this.isOpen = !this.isOpen;
+  }
 
 }
 
