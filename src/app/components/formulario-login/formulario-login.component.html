@@ -1,0 +1,31 @@
+<form [formGroup]= "formUser"(ngSubmit)="onSubmit()">
+  <div class="form-group mb-3 text-start text-primary fw-light">
+    <label for="email" >Email</label>
+    <input
+     type="text"
+     id="email"
+     name="email"
+     class="form-control"
+     formControlName="email"
+      >
+  </div>
+  <div class="form-group mb-3 text-start text-primary fw-light shadow p-3 mb-5 bg-body rounde">
+    <label for="senha">Senha</label>
+    <input
+     type="password"
+     id="senha"
+     name="senha"
+     class="form-control"
+     formControlName="senha"
+      >
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="signIn()" >Submit</button>
+
+  <div>
+    <a class="link-opacity-75 align-items-start cursor-pointer" (click) ="esqueceuASenha()">Esqueceu sua senha? </a>
+  </div>
+
+
+</form>
+

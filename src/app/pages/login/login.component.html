@@ -1,0 +1,52 @@
+<div class="container-fluid text-center bg-primary rounded-3 ">
+
+
+  <div class="row align-items-center">
+    <div class="col-6">
+      <div class=" img-fluid ">
+
+        <div class=" w-100 p-3">
+          <img class="img"src="https://www.eurodicas.com.br/wp-content/uploads/2021/06/hospital-em-portugal-1-1200x675.jpg">
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="col-6 my-4 ">
+
+   <div>
+    <div class="row col-8 ">
+      <br>
+
+      <h4 class="fw-medium fs-6 fw-bold align-items-start text-light my-4 ">Não possui um cadastro?
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Cadastrar</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content-fullscreen ">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Cadastrar novo usuário!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                        <div class="modal-body-fullscreen">
+                          <app-formulario-cadastro></app-formulario-cadastro>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          <button type="button" class="btn btn-primary">Salvar</button>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+      </h4>
+
+        <span class="col-3 fs-1 text-light texto align-items-right text-light fw-bold ">Login</span>
+      </div>
+      <div class="row col-10 aling-right bg-light  rounded-3 my-2 shadow p-3 mb-5 bg-body-tertiary rounded my-4">
+
+          <app-formulario-login></app-formulario-login>
+
+          </div>
+
+      </div >

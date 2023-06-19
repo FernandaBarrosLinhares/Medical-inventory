@@ -1,0 +1,295 @@
+<!-- Deve conter um formulário para cadastro de paciente com botões para editar, deletar e salvar.
+Durante o cadastro de um novo paciente, os botões de editar e deletar devem ficar desativados (desabilitados).
+Campos do formulário:
+Deverá verificar os dados informados antes de cadastrar.
+Deverá criar um identificador único para cada paciente cadastrado.
+Deverá apresentar animação ao salvar. -->
+
+
+
+
+<div class="row container-fluid d-flex my-4 p-3 rounded-3">
+  <div class= "col-12 d-flex my-4 align-items-start">
+    <form [formGroup]="formPatient" (ngSubmit)="onSubmit()" >
+
+      <div class=" row ">
+          <button type="submit" class="button" class="col-md-2 btn btn-info text-body-info my-4">Editar</button>
+          <button type="submit" class="button" class=" col-md-2 btn btn-danger text-body-info my-4"> Deletar</button>
+          <button type="submit" class="button" class="col-md-2 btn btn-success text-body-info my-4"> Salvar</button>
+        </div>
+         <!--  Nome Completo: Obrigatório, com máximo e mínimo de 80 e 4 caracteres, respectivamente. -->
+
+         <div class="col-8 align-items-start">
+          <label for="nomeCompleto" >Nome</label>
+          <input
+           type="text"
+           id="nomeCompleto"
+           class="form-control"
+           formControlName="nomeCompleto"
+           required>
+           <div
+           *ngIf="formPatient.get('nomeCompleto')?.invalid && (formPatient.get('nomeCompleto')?.dirty || formPatient.get('nomeCompleto')?.touched)">
+           <div class="text-red-500 text-sm">*Campo obrigatório</div>
+           <div class="text-red-500 text-sm" *ngIf="formPatient.get('nomeCompleto')?.errors?.['minlength']">*Mínimo de 4
+               caracteres
+              <div>
+                class="text-red-500 text-sm" *ngIf="formulario.get('nomeCompleto')?.errors?.['maxlength']">*Máximo de 80
+                    caracteres
+              </div>
+           </div>
+        </div>
+  <div class="row container-fluid d-flex mb-4 rounded-3">
+
+
+       
+
+  </div>
+  <div class="row d-flex container-fluid">
+
+
+        <!-- CPF: Obrigatório com o formato 000.000.000-00 -->
+        <div class="col-3">
+          <label for="inputCpf" class="form-label">CPF</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputCpf"
+            required
+            />
+          <div *ngIf="formPatient.get('cpf')?.invalid && (formPatient.get('cpf')?.dirty || formPatient.get('cpf')?.touched)">
+              <div class="text-red-500 text-sm">*Campo obrigatório</div>
+          </div>
+        </div>
+        <!-- RG com órgão expedidor: Obrigatório, com máximo de 20 caracteres. -->
+
+        <div class="col-3">
+          <label for="inputRg" class="form-label">RG</label>
+          <input
+           type="text"
+           class="form-control"
+           id="inputRg"
+           required>
+
+
+        </div>
+        <div class="col-4">
+            <label for="nomeCompleto" >Orgão expedidor</label>
+            <input
+             type="text"
+             id="orgaoExpedidor"
+             class="form-control"
+             formControlName="orgaoExpedidor"
+             required>
+             <div *ngIf="formPatient.get('rgOrgaoExpedidor')?.invalid && (formPatient.get('rgOrgaoExpedidor')?.dirty || formPatient.get('rgOrgaoExpedidor')?.touched)"
+                class="text-red-600">
+                <div *ngIf="formPatient.get('rgOrgaoExpedidor')?.errors?.['required']">Campo obrigatório.</div>
+                  <div *ngIf="formPatient.get('rgOrgaoExpedidor')?.errors?.['maxLength']">O campo deve ter no máximo 20 caracteres.
+                </div>
+            </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+        <!-- Telefone: Obrigatório com o formato (99) 9 9999-9999. -->
+
+            <div class="col-md-2">
+              <label for="inputTelefone" class="form-label">Telefone</label>
+              <input
+              type="text"
+              class="form-control"
+              id="inputTelefone"
+              required>
+        </div>
+
+        <!-- E-mail: Não obrigatório e com validação. -->
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email"
+            class="form-control"
+            id="email"
+            required
+            >
+            <div *ngIf="formPatient.get('email')?.invalid && (formPatient.get('email')?.dirty || formPatient.get('email')?.touched)"
+                class="text-red-600">Formato de e-mail inválido.</div>
+          </div>
+          <!-- Naturalidade: Obrigatório, com máximo e mínimo de 64 e 8n caracteres, respectivamente. -->
+          <div class="col-md-3">
+            <label for="inputNaturalidade" class="form-label">Naturalidade</label>
+            <input
+            type="text"
+            class="form-control"
+            id="inputNaturalidade"
+            required>
+            <div *ngIf="formPatient.get('naturalidade')?.errors?.['required']">Campo obrigatório.</div>
+            <div *ngIf="formPatient.get('naturalidade')?.errors?.['minLength']">O campo deve ter no mínimo 8 caracteres.
+            </div>
+            <div *ngIf="formPatient.get('naturalidade')?.errors?.['maxLength']">O campo deve ter no máximo 64 caracteres.
+            </div>
+
+          </div>
+
+          <!-- Contato de Emergência: Obrigatório com o formato (99) 9 9999-9999. -->
+
+          <div class="col-md-2">
+            <label for="inputContatoEmergencia" class="form-label">Contato Emergência</label>
+            <input
+            type="text"
+            class="form-control"
+            id="inputContatoEmergência"
+            required
+            >
+            <div *ngIf="formPatient.get('contatoEmergencia')?.invalid && (formPatient.get('contatoEmergencia')?.dirty || formPatient.get('contatoEmergencia')?.touched)"
+                class="text-red-600">Campo obrigatório.</div>
+          </div>
+
+          <!-- Lista de Alergias: Não obrigatório.-->
+          <div class="col-md-2">
+            <label for="alergias">Lista de Alergias (opcional)</label>
+            <input
+            type="text"
+            id="alergias" formControlName="alergias" />
+          </div>
+          <!--Lista de cuidados especificos-->
+          <div class="col-md-2">
+            <label for="cuidadosEspecificos">Lista de Cuidados Específicos (opcional)</label>
+            <input
+            type="text"
+            id="cuidadosEspecificos" formControlName="cuidadosEspecificos" />
+          </div>
+          <!--Lista de convenio-->
+          <div>
+            <label for="convenio">Convênio (opcional)</label>
+            <input type="text" id="convenio" formControlName="convenio" />
+          </div>
+          <!--Numero do convenio-->
+          <div>
+            <label for="numeroConvenio">Número do Convênio (opcional)</label>
+            <input type="text" id="numeroConvenio" formControlName="numeroConvenio" />
+
+          </div>
+          <!--Validade do convenio-->
+          <div>
+            <label for="validadeConvenio">Validade do Convênio (opcional)</label>
+            <input type="date" id="validadeConvenio" formControlName="validadeConvenio" />
+          </div>
+
+      <!-- Deverá utilizar a API do ViaCEP para buscar os dados de endereço. -->
+
+
+
+      <p> Endereço</p>
+
+      <!-- Rua -->
+
+      <div class="col-md-6">
+        <label for="inputRua" class="form-label">Rua</label>
+        <input type="text" class="form-control" id="inputRua">
+      </div>
+
+      <!-- Logradouro -->
+
+      <div class="col-4 3-md-2">
+        <label for="inputLogradouro" class="form-label">Logradouro </label>
+        <input type="text" class="form-control" id="inputLogradouro">
+      </div>
+
+      <!-- Número -->
+      <div class="col-md-1">
+        <label for="inputContatoNumero" class="form-label">Número</label>
+        <input type="number" class="form-control" id="inputContatoNumero">
+      </div>
+
+      <!-- Complemento -->
+
+      <div class="col-md-3">
+        <label for="inputComplemento" class="form-label">Complemento</label>
+        <input type="text" class="form-control" id="inputComplemento">
+      </div>
+
+      <!-- Bairro -->
+
+      <div class="col-md-3">
+        <label for="inputBairro" class="form-label">Bairro</label>
+        <input type="text" class="form-control" id="inputBairro">
+      </div>
+      <!-- Cidade -->
+      <div class="col-4 3-md-3">
+        <label for="inputCidade" class="form-label">Cidade </label>
+        <input type="text" class="form-control" id="inputCidade">
+      </div>
+
+      <!-- Estado -->
+
+      <div class="col-4 3-md-1">
+        <label for="inputEstado" class="form-label">Estado</label>
+        <input type="text" class="form-control" id="inputEstado">
+      </div>
+
+      <!-- Ponto de Referência -->
+
+      <div class="col-4 3-md-6">
+        <label for="inputPontoReferencia" class="form-label">Ponto de Referência </label>
+        <input type="text" class="form-control" id="inputPontoREferencia">
+      </div>
+        <!-- Gênero: Obrigatório com dropdown de opções pré-definidas. -->
+
+        <div class="col-2 md-1">
+
+          <select class="form-select" multiple aria-label="multiple select example">
+            <option selected>Genero</option>
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+        <div>
+          *ngIf="formulario.get('genero')?.invalid && (formulario.get('genero')?.dirty || formulario.get('genero')?.touched)">
+              <div class="text-red-500 text-sm">*Campo obrigatório</div>
+        </div>
+          </select>
+
+        </div>
+          <!-- Data de Nascimento: Obrigatório, data válida. -->
+
+         <div class="col-3 md-1">
+          <label for="dataNascimento">Data de Nascimento</label>
+              <input
+               type="date"
+               id="dataNascimento"
+               formControlName="dataNascimento"
+               required
+               />
+              <div
+                  *ngIf="formPatient.get('dataNascimento')?.invalid && (formPatient.get('dataNascimento')?.dirty || formPatient.get('dataNascimento')?.touched)">
+             <div class="text-red-500 text-sm">*Campo obrigatório</div>
+           </div>
+
+         
+             <!-- Estado Civil: Obrigatório com dropdown de opções pré-definidas. -->
+
+             <div class="col-3 -md-1">
+               <select class="form-select" multiple aria-label="multiple select example">
+                 <option selected>Estado civil</option>
+                 <option value="1">Solteiro</option>
+                 <option value="2">Casado</option>
+                 <option value="3">União estavel</option>
+                 <option value="1">Divorciado</option>
+                 <option value="2">Viúvo</option>
+               </select>
+               <div *ngIf="formPatient.get('estadoCivil')?.invalid && (formPatient.get('estadoCivil')?.dirty || formPatient.get('estadoCivil')?.touched)"
+           class="text-red-600">Campo obrigatório.</div>
+                </div>
+        </div>
+
+      </form>
+    </div>
+
+
+
+
+
+
+

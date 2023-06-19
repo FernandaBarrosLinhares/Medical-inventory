@@ -1,0 +1,49 @@
+<div [class.open]="isOpen">
+  <!-- Conteúdo do menu -->
+  <div > <!--Quando conseguir resolver o usuario conectado, usar o  *ngIf="menuVisible"-->
+    <div class="container-fluid   p-3 mb-5 bg-body rounded col-8 row align-items-center my-4 bg-body primary ">
+      <div class= "row">
+        <label>
+          <div class="menu-hamb" >
+          <span class="hamburguer"></span>
+          </div>
+          </label>
+          <ul class="ul-mbl">
+
+
+
+
+
+        <br>
+          <li><a routerLink="/formulario-login">Login</a></li>
+          <br>
+          <li><a routerLink="home">Home</a></li>
+
+          <br>
+          <li><a routerLink="/cadastro-paciente">Cadastro Paciente</a></li>
+          <br>
+          <li><a routerLink="/cadastro-consulta" >Cadastro Consulta</a></li>
+          <br>
+          <li><a routerLink="/cadastro-exame">Cadastro Exame</a></li>
+          <br>
+          <li><a routerLink="/listagem-prontuario">Listagem prontuário</a></li>
+          <br>
+          <li><a routerLink="/prontuario-paciente">Prontuário paciente</a></li>
+          <br>
+            <div class="menu">
+
+
+
+      </div>
+
+
+
+  <button (click)="toggleMenu()">Fechar</button>
+
+
+
+
+
+
+
+
