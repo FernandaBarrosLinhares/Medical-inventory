@@ -28,9 +28,11 @@ O projeto se encontra na parte inicial. Foi criada a estrura do projeto e aplica
 
 O projeto ainda deverá passar por alteração de layout  e inclusão de outras funcionalidade intrísecas do sistema como:
 
-#Inseri o buscador de CEP através de consumo de API
-#Inserir informções dos pacientes e toranlas dinâmicas
-#Desabilitar botões de editar e deletar, durante o uso
+#Inserir o buscador de CEP através de consumo de API;
+#Inserir informações dos pacientes e torna-las dinâmicas;
+#Desabilitar botões de editar e deletar, durante o uso;
+#incluir o botão que fecha o menu ao clicar
+#incluir informações dinamicas na toolbar
 
 
 
