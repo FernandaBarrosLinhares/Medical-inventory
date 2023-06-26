@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from './users/shared/user';
 
 let users: Array<IUser>;
 
@@ -13,11 +14,11 @@ export interface IUser{
 export class AceesLoginService {
 
   constructor() {
-    if(!localStorage.getItem('lab_users')){
-      users = new Array<IUser>();
+    if(!localStorage.getItem('user')){
+      users = new Array<User>();
       return;
     }
-    users = JSON.parse(localStorage.getItem("Lab_users")!);
+    users = JSON.parse(localStorage.getItem("user")!);
    }
 
    //Funcao para Login
@@ -33,9 +34,9 @@ export class AceesLoginService {
     });
 
     //Se conectado, vai no local storage e grava na variavel,o usuario que esta conectado
-    if(connected) localStorage.setItem("Lab_connected", loginUser.email!);
+    if(connected) localStorage.setItem("User_logged", loginUser.email!);
     return !connected
-
+// Aqui uso um ternario, dentro de outro ternario.
     ? userExist
       ? {menssage: "Senha incorretos"}
       :{menssage:" Usuário não existe"}

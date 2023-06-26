@@ -1,37 +1,29 @@
-//Página de Cadastro de Exame: Deve conter uma busca de paciente e um formulário para cadastro de consulta com botões editar, deletar e salvar.
-//Durante o cadastro, os botões de editar e deletar devem ficar desativados (desabilitados).
+
 <div class=" row ">
     <button type="submit" class="button" class="col-1 btn btn-info text-body-info my-4">Editar</button>
     <button type="submit" class="button" class=" col-1 btn btn-danger text-body-info my-4"> Deletar</button>
     <button type="submit" class="button" class="col-1 btn btn-success text-body-info my-4"> Salvar</button>
   </div>
-//Campos do formulário:
-//Nome do Exame: Obrigatório, com máximo e mínimo de 64 e 8 caracteres, respectivamente.
+
 <div class="mb-3 col-12" >
   <label for="nomeExame" >Nome do Exame:</label>
   <input type="text" class="form-control" id="nomeExame">
 </div>
-//Data do Exame: Obrigatório, buscando horário atual do sistema e liberando para edição.
-//Horário do Exame: Obrigatório, buscando horário atual do sistema e liberando para edição.
-//Tipo do Exame: Obrigatório, com máximo e mínimo de 32 e 4 caracteres, respectivamente.
+
 <div class="mb-3 col-6" >
   <label for="tipoExame" >Tipo do Exame:</label>
   <input type="text" class="form-control" id="tipoExame">
 </div>
 
-//Laboratório: Obrigatório, com máximo e mínimo de 32 e 4 caracteres, respectivamente.
 <div class="mb-3 col-6" >
   <label for="tipoExame" >Laboratório</label>
   <input type="text" class="form-control" id="laboratorio">
 </div>
 
-//URL do Documento: Não obrigatório.
-//Resultados: Obrigatório, com máximo e mínimo de 1024 e 16 caracteres, respectivamente.
+
 <div class="input-group input-group-lg">
   <span class="resultados" id="inputGroup-sizing-lg">Resultados</span>
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 </div>
-//Deverá verificar os dados informados antes de cadastrar.
-//Deverá criar um identificador único para cada exame cadastrado.
-//Deverá apresentar animação ao salvar.
+
 

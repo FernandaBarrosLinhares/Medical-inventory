@@ -8,10 +8,11 @@ import { LocalStorageService } from 'src/app/local-storage.service';
 })
 export class ToolbarComponent implements OnInit{
   //usando a interpolação para passar os dados
- // doctor: string = "user";
+ doctor: string = "user";
+//email:string = "user";
 
  //usando @Input
- @Input() user: string= ''
+ @Input() user:string = "";
 
   toolbarVisible: boolean = true;
 
